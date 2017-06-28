@@ -10577,7 +10577,7 @@ ol.Overlay.Popup.prototype.show = function (coordinate, html)
 		this.prevHTML = html;
 		$(this.content).html("").append(html);
 		// Refresh when loaded (img)
-		$("*", this.content).load(function()
+		$("*", this.content).on(function()
 		{	map.renderSync(); 
 		})
 	}
